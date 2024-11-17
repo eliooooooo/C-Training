@@ -1,7 +1,7 @@
 all : main run clean
 
 run:
-	./main
+	./main 7
 clean:
 	rm -f main
 main:
