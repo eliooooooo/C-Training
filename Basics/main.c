@@ -48,6 +48,7 @@ void compute_rectangle(int height, int width)
     printf("Area of the rectangle: %.2f\n", area);
 }
 
+// Ex 6
 void compute_circle(int radius)
 {
     float perimeter = (2*radius)*M_PI;
@@ -57,11 +58,24 @@ void compute_circle(int radius)
     printf("Area of the circle: %.2f\n", area);
 }
 
+// Ex 8
+void days_converter(int days)
+{
+    int years = days/365;
+    int day_left = days%365;
+    int weeks = day_left/7;
+    day_left = day_left%7;
+    printf("Years: %d\n", years);
+    printf("Weeks: %d\n", weeks);
+    printf("Days : %d\n", day_left);
+}
+
 int main()
 {
     // print_infos();
     // check_version();
     // compute_rectangle(5, 3);
-    compute_circle(5);
+    // compute_circle(5);
+    days_converter(1329);
     return 0;
 }
