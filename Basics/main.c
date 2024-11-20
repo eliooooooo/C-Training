@@ -70,12 +70,30 @@ void days_converter(int days)
     printf("Days : %d\n", day_left);
 }
 
+// Ex 13
+void find_max(int list_number[3])
+{
+    int max = list_number[0];
+    for (size_t i = 1; i < 3; i++)
+    {
+        if (list_number[i] > max)
+        {
+            max = list_number[i];
+        }
+        
+    }
+    
+    printf("Max value is: %d\n", max);
+}
+
 int main()
 {
     // print_infos();
     // check_version();
     // compute_rectangle(5, 3);
     // compute_circle(5);
-    days_converter(1329);
+    // days_converter(1329);
+    int table[3] = {10, 8, 9};
+    find_max(table);
     return 0;
 }
