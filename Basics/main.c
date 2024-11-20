@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 // Ex 1
 void print_infos()
@@ -47,10 +48,20 @@ void compute_rectangle(int height, int width)
     printf("Area of the rectangle: %.2f\n", area);
 }
 
+void compute_circle(int radius)
+{
+    float perimeter = (2*radius)*M_PI;
+    float area = (radius*radius)*M_PI;
+
+    printf("Perimeter of the circle: %.2f\n", perimeter);
+    printf("Area of the circle: %.2f\n", area);
+}
+
 int main()
 {
     // print_infos();
     // check_version();
-    compute_rectangle(5, 3);
+    // compute_rectangle(5, 3);
+    compute_circle(5);
     return 0;
 }
