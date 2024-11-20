@@ -37,9 +37,20 @@ void check_version()
     }
 }
 
+// Ex 5
+void compute_rectangle(int height, int width)
+{
+    float area = height*width;
+    float perimeter = (height+width)*2;
+
+    printf("Perimeter of the rectangle: %.2f\n", perimeter);
+    printf("Area of the rectangle: %.2f\n", area);
+}
+
 int main()
 {
     // print_infos();
     // check_version();
+    compute_rectangle(5, 3);
     return 0;
 }
