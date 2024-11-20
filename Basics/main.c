@@ -22,9 +22,24 @@ void print_infos()
     printf("Mobile   : %s\n", num);
 }
 
+// Ex 2
+void check_version()
+{
+    if (__STDC_VERSION__ == 199901L)
+    {
+        printf("You are using the C99 version\n");
+    } else if ( __STDC_VERSION__ == 201112L )
+    {
+        printf("You are using the C11 version\n");
+    } else 
+    {
+        printf("You are using the C90 version\n");
+    }
+}
+
 int main()
 {
     // print_infos();
-    
+    // check_version();
     return 0;
 }
