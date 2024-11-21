@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 
 // Ex 1
 void print_infos()
@@ -108,7 +109,31 @@ void print_int_array(int* array, int array_length)
     printf("\n");
 }
 
+// Ex 131
+void contain(char string1[], char string2[])
+{
+    for (size_t i = 0; i < strlen(string1)-strlen(string2); i++)
+    {   
+        if (string1[i] == string2[0])
+        {
+            for (size_t j = 1; j < strlen(string2); j++)
+            {
+                if (string1[i+j] != string2[j])
+                {
+                    break;
+                }
 
+                if (j == strlen(string2)-1)
+                {
+                    printf("The string %s is contained in %s\n", string2, string1);
+                    return;
+                }
+            }
+        }
+    }
+
+    printf("The string %s is not contained in %s\n", string2, string1);
+}
 
 int main()
 {
@@ -121,7 +146,8 @@ int main()
     // find_max(table);
     // int range[2] = {4, 10};
     // sum_range(range);
-    int array[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    print_int_array(array, 9);
+    // int array[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    // print_int_array(array, 9);
+    contain("salut !", "sal");
     return 0;
 }
