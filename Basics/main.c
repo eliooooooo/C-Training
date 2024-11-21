@@ -98,6 +98,18 @@ void sum_range(int pair[2])
     printf("Sum of the range (%d, %d): %d\n", pair[0], pair[1], sum);
 }
 
+// Ex 48
+void print_int_array(int* array, int array_length)
+{
+    for (int i = 0; i < array_length; i++)
+    {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+}
+
+
+
 int main()
 {
     // print_infos();
@@ -107,7 +119,9 @@ int main()
     // days_converter(1329);
     // int table[3] = {10, 8, 9};
     // find_max(table);
-    int range[2] = {4, 10};
-    sum_range(range);
+    // int range[2] = {4, 10};
+    // sum_range(range);
+    int array[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    print_int_array(array, 9);
     return 0;
 }
