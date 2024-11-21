@@ -86,6 +86,18 @@ void find_max(int list_number[3])
     printf("Max value is: %d\n", max);
 }
 
+// Ex 34
+void sum_range(int pair[2])
+{
+    int sum = 0;
+    for (size_t i = pair[0]; i < pair[1]; i++)
+    {
+        sum = sum + i;
+    }
+
+    printf("Sum of the range (%d, %d): %d\n", pair[0], pair[1], sum);
+}
+
 int main()
 {
     // print_infos();
@@ -93,7 +105,9 @@ int main()
     // compute_rectangle(5, 3);
     // compute_circle(5);
     // days_converter(1329);
-    int table[3] = {10, 8, 9};
-    find_max(table);
+    // int table[3] = {10, 8, 9};
+    // find_max(table);
+    int range[2] = {4, 10};
+    sum_range(range);
     return 0;
 }
